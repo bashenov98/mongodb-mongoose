@@ -21,8 +21,17 @@ var createAndSavePerson = function(done) {
   });
 };
 
+var arrayOfPeople = [
+  {name: "Rustam Bashenov", age: 22, favoriteFoods: ["fish", "pizza"]},
+  {name: "Ramazan Abzhamel", age: 23, favoriteFoods: ["chicken", "pasta"]},
+  {name: "Chingis Smagulov", age: 24, favoriteFoods: ["hachapuri", "ravioli"]},
+];
+
 const createManyPeople = (arrayOfPeople, done) => {
-  done(null /*, data*/);
+  Person.create(arrayOfPeople, function (err, people) {
+    if (err) return console.log(err);
+    done(null, people);
+  });
 };
 
 const findPeopleByName = (personName, done) => {
