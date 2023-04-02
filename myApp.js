@@ -21,10 +21,6 @@ var createAndSavePerson = function(done) {
   });
 };
 
-const createAndSavePerson = (done) => {
-  done(null /*, data*/);т
-};
-
 const createManyPeople = (arrayOfPeople, done) => {
   done(null /*, data*/);
 };
